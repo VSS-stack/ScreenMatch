@@ -9,8 +9,7 @@ public class Main {
         myFilm.rate(8);
         myFilm.rate(5);
         myFilm.rate(7);
-        System.out.println(myFilm.ratingSum);
-        System.out.println(myFilm.totalOfRatings);
+        System.out.println(myFilm.getTotalOfRatings());
         System.out.println(myFilm.getAverageRating());
     }
 }

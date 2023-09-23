@@ -2,13 +2,17 @@ public class Film {
     public String name;
     public int releaseYear;
     public boolean includedInThePlan;
-    public double ratingSum;
-    public int totalOfRatings;
+    private double ratingSum;
+    private int totalOfRatings;
     public int durationInMinutes;
 
     void getDatasheet() {
         System.out.println("Film name: " + name);
         System.out.println("Release year: " + releaseYear);
+    }
+
+    int getTotalOfRatings() {
+        return totalOfRatings;
     }
 
     void rate(double rating) {
