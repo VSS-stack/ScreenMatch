@@ -1,3 +1,5 @@
+package ScreenMatch.Template;
+
 public class Film {
     public String name;
     public int releaseYear;
@@ -6,21 +8,21 @@ public class Film {
     private int totalOfRatings;
     public int durationInMinutes;
 
-    void getDatasheet() {
-        System.out.println("Film name: " + name);
+    public void getDatasheet() {
+        System.out.println("ScreenMatch.Template.Film name: " + name);
         System.out.println("Release year: " + releaseYear);
     }
 
-    int getTotalOfRatings() {
+    public int getTotalOfRatings() {
         return totalOfRatings;
     }
 
-    void rate(double rating) {
+    public void rate(double rating) {
         ratingSum += rating;
         totalOfRatings++;
     }
 
-    double getAverageRating() {
+    public double getAverageRating() {
         return ratingSum / totalOfRatings;
     }
 }
