@@ -5,7 +5,12 @@ public class Main {
         myFilm.releaseYear = 1972;
         myFilm.durationInMinutes = 175;
 
-        System.out.println(myFilm.name);
-        System.out.println(myFilm.releaseYear);
+        myFilm.getDatasheet();
+        myFilm.rate(8);
+        myFilm.rate(5);
+        myFilm.rate(7);
+        System.out.println(myFilm.ratingSum);
+        System.out.println(myFilm.totalOfRatings);
+        System.out.println(myFilm.getAverageRating());
     }
 }
