@@ -1,13 +1,31 @@
 package ScreenMatch.Template;
 
 public class Film {
-    public String name;
-    public int releaseYear;
-    public boolean includedInThePlan;
+    private String name;
+    private int releaseYear;
+    private boolean includedInThePlan;
     private double ratingSum;
     private int totalOfRatings;
-    public int durationInMinutes;
+    private int durationInMinutes;
 
+    /* Setters */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public void setIncludedInThePlan(boolean includedInThePlan) {
+        this.includedInThePlan = includedInThePlan;
+    }
+
+    public void setDurationInMinutes(int durationInMinutes) {
+        this.durationInMinutes = durationInMinutes;
+    }
+
+    /* Getters */
     public void getDatasheet() {
         System.out.println("ScreenMatch.Template.Film name: " + name);
         System.out.println("Release year: " + releaseYear);
