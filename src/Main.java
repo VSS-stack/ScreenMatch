@@ -13,5 +13,8 @@ public class Main {
         myFilm.rate(7);
         System.out.println(myFilm.getTotalOfRatings());
         System.out.println(myFilm.getAverageRating());
+
+        Serie mySerie = new Serie();
+        mySerie.setName("Lost");
     }
 }
