@@ -31,6 +31,10 @@ public class Title {
         System.out.println("Release year: " + releaseYear);
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getTotalOfRatings() {
         return totalOfRatings;
     }
@@ -42,5 +46,9 @@ public class Title {
 
     public double getAverageRating() {
         return ratingSum / totalOfRatings;
+    }
+
+    public int getDurationInMinutes() {
+        return durationInMinutes;
     }
 }
