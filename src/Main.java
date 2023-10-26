@@ -1,3 +1,4 @@
+import ScreenMatch.Fuction.TimeCalc;
 import ScreenMatch.Template.*;
 
 public class Main {
@@ -20,5 +21,10 @@ public class Main {
         mySerie.setEpisodesBySeason(20);
         mySerie.setMinutesPerEpisode(30);
         System.out.println("Duration of " + mySerie.getName() + " : " + mySerie.getDurationInMinutes() + " minutes");
+
+        TimeCalc calc = new TimeCalc();
+        calc.includeNew(myFilm);
+        calc.includeNew(mySerie);
+        System.out.println(calc.getTotalTime());
     }
 }
