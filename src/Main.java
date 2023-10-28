@@ -1,3 +1,4 @@
+import ScreenMatch.Fuction.RecomentionFilter;
 import ScreenMatch.Fuction.TimeCalc;
 import ScreenMatch.Template.*;
 
@@ -10,8 +11,8 @@ public class Main {
 
         myFilm.getDatasheet();
         myFilm.rate(8);
-        myFilm.rate(5);
-        myFilm.rate(7);
+        myFilm.rate(8);
+        myFilm.rate(9);
         System.out.println(myFilm.getTotalOfRatings());
         System.out.println(myFilm.getAverageRating());
 
@@ -26,5 +27,14 @@ public class Main {
         calc.includeNew(myFilm);
         calc.includeNew(mySerie);
         System.out.println(calc.getTotalTime());
+
+        RecomentionFilter myFilter = new RecomentionFilter();
+        myFilter.filter(myFilm);
+
+        Episode myEpisode = new Episode();
+        myEpisode.setNumber(1);
+        myEpisode.setSerie(mySerie);
+        myEpisode.setTotalVisualization(300);
+        myFilter.filter(myEpisode);
     }
 }

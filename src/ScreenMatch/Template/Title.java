@@ -27,7 +27,7 @@ public class Title {
 
     /* Getters */
     public void getDatasheet() {
-        System.out.println("ScreenMatch.Template.Film name: " + name);
+        System.out.println("Name: " + name);
         System.out.println("Release year: " + releaseYear);
     }
 

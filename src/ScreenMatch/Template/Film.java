@@ -1,6 +1,8 @@
 package ScreenMatch.Template;
 
-public class Film extends Title{
+import ScreenMatch.Fuction.Classification;
+
+public class Film extends Title implements Classification {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Film extends Title{
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getClassification() {
+        return (int) getAverageRating() / 2;
     }
 }
