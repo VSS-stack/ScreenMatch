@@ -2,6 +2,8 @@ import ScreenMatch.Fuction.RecomentionFilter;
 import ScreenMatch.Fuction.TimeCalc;
 import ScreenMatch.Template.*;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Film myFilm = new Film();
@@ -36,5 +38,17 @@ public class Main {
         myEpisode.setSerie(mySerie);
         myEpisode.setTotalVisualization(300);
         myFilter.filter(myEpisode);
+
+        var secondFilm = new Film();
+        secondFilm.setName("Toy Story");
+        secondFilm.setReleaseYear(1995);
+        secondFilm.setDurationInMinutes(81);
+        secondFilm.rate(10);
+
+        ArrayList<Film> filmList = new ArrayList<>();
+        filmList.add(myFilm);
+        filmList.add(secondFilm);
+        System.out.println("Film list size: " + filmList.size());
+        System.out.println("The first film is: " + filmList.get(0).getName());
     }
 }
