@@ -50,5 +50,6 @@ public class Main {
         filmList.add(secondFilm);
         System.out.println("Film list size: " + filmList.size());
         System.out.println("The first film is: " + filmList.get(0).getName());
+        System.out.println(filmList);
     }
 }

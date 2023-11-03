@@ -51,4 +51,8 @@ public class Title {
     public int getDurationInMinutes() {
         return durationInMinutes;
     }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
 }
