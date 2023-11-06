@@ -5,6 +5,10 @@ import ScreenMatch.Fuction.Classification;
 public class Film extends Title implements Classification {
     private String director;
 
+    public Film(String name, int year) {
+        super(name, year);
+    }
+
     public String getDirector() {
         return director;
     }

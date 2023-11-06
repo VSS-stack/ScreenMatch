@@ -6,9 +6,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Film myFilm = new Film();
-        myFilm.setName("The Godfather");
-        myFilm.setReleaseYear(1972);
+        Film myFilm = new Film("The Godfather", 1972);
         myFilm.setDurationInMinutes(175);
 
         myFilm.getDatasheet();
@@ -18,8 +16,7 @@ public class Main {
         System.out.println(myFilm.getTotalOfRatings());
         System.out.println(myFilm.getAverageRating());
 
-        Serie mySerie = new Serie();
-        mySerie.setName("Lost");
+        Serie mySerie = new Serie("Lost", 2004);
         mySerie.setSeasons(10);
         mySerie.setEpisodesBySeason(20);
         mySerie.setMinutesPerEpisode(30);
@@ -39,9 +36,7 @@ public class Main {
         myEpisode.setTotalVisualization(300);
         myFilter.filter(myEpisode);
 
-        var secondFilm = new Film();
-        secondFilm.setName("Toy Story");
-        secondFilm.setReleaseYear(1995);
+        var secondFilm = new Film("Toy Story", 1995);
         secondFilm.setDurationInMinutes(81);
         secondFilm.rate(10);
 

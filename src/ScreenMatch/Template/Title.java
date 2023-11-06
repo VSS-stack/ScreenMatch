@@ -8,6 +8,12 @@ public class Title {
     private int totalOfRatings;
     private int durationInMinutes;
 
+    /* Constructor */
+    public Title(String name, int year) {
+        this.name = name;
+        this.releaseYear = year;
+    }
+
     /* Setters */
     public void setName(String name) {
         this.name = name;
