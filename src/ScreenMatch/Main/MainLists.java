@@ -5,6 +5,9 @@ import ScreenMatch.Template.Serie;
 import ScreenMatch.Template.Title;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainLists {
     public static void main(String[] args) {
@@ -40,5 +43,20 @@ public class MainLists {
                 System.out.println("Classification: " + film.getClassification());
             }
         }
+
+        ArrayList<String> artistSearch = new ArrayList<>();
+        artistSearch.add("Adam Sandler");
+        artistSearch.add("Keanu Reeves");
+        artistSearch.add("Cara Delevingne");
+        System.out.println(artistSearch);
+
+        Collections.sort(artistSearch);
+        System.out.println(artistSearch);
+
+        Collections.sort(watchedTitles);
+        System.out.println(watchedTitles);
+
+        watchedTitles.sort(Comparator.comparing(Title::getReleaseYear));
+        System.out.println(watchedTitles);
     }
 }
