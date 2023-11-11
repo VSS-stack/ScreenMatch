@@ -4,10 +4,7 @@ import ScreenMatch.Template.Film;
 import ScreenMatch.Template.Serie;
 import ScreenMatch.Template.Title;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class MainLists {
     public static void main(String[] args) {
@@ -44,7 +41,7 @@ public class MainLists {
             }
         }
 
-        ArrayList<String> artistSearch = new ArrayList<>();
+        List<String> artistSearch = new ArrayList<>();
         artistSearch.add("Adam Sandler");
         artistSearch.add("Keanu Reeves");
         artistSearch.add("Cara Delevingne");
