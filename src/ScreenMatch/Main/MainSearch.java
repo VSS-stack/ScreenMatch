@@ -1,5 +1,8 @@
 package ScreenMatch.Main;
 
+import ScreenMatch.Template.Title;
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -24,5 +27,9 @@ public class MainSearch {
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
+
+        Gson gson = new Gson();
+        Title myTitle = gson.fromJson(response.body(), Title.class);
+        System.out.println(myTitle);
     }
 }
