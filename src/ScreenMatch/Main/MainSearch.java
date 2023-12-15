@@ -34,8 +34,13 @@ public class MainSearch {
         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
         TitleOmbd myTitleOmdb = gson.fromJson(response.body(), TitleOmbd.class);
         System.out.println(myTitleOmdb);
-        Title myTitle = new Title(myTitleOmdb);
-        System.out.println("Converted title:");
-        System.out.println(myTitle);
+
+        try {
+            Title myTitle = new Title(myTitleOmdb);
+            System.out.println("Converted title:");
+            System.out.println(myTitle);
+        } catch (NumberFormatException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
     }
 }
