@@ -1,5 +1,6 @@
 package ScreenMatch.Main;
 
+import ScreenMatch.Exception.YearConversionException;
 import ScreenMatch.Template.Title;
 import ScreenMatch.Template.TitleOmbd;
 import com.google.gson.FieldNamingPolicy;
@@ -40,6 +41,8 @@ public class MainSearch {
             System.out.println("Converted title:");
             System.out.println(myTitle);
         } catch (NumberFormatException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        } catch (YearConversionException e) {
             System.out.println("An error occurred: " + e.getMessage());
         }
     }
