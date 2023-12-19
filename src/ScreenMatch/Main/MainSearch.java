@@ -7,6 +7,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -40,6 +41,10 @@ public class MainSearch {
             Title myTitle = new Title(myTitleOmdb);
             System.out.println("Converted title:");
             System.out.println(myTitle);
+
+            FileWriter newFile = new FileWriter("Movies.txt");
+            newFile.write(myTitle.toString());
+            newFile.close();
         } catch (NumberFormatException e) {
             System.out.println("An error occurred: " + e.getMessage());
         } catch (YearConversionException e) {
