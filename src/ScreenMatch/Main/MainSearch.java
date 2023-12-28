@@ -33,15 +33,18 @@ public class MainSearch {
                 .send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
 
+        /* Transform the response into an object */
         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
         TitleOmbd myTitleOmdb = gson.fromJson(response.body(), TitleOmbd.class);
         System.out.println(myTitleOmdb);
 
         try {
+            /* Convert into a Title object */
             Title myTitle = new Title(myTitleOmdb);
             System.out.println("Converted title:");
             System.out.println(myTitle);
 
+            /* Write a file with the title atributes */
             FileWriter newFile = new FileWriter("Movies.txt");
             newFile.write(myTitle.toString());
             newFile.close();
