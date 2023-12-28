@@ -1,17 +1,15 @@
 # ScreenMatch
 
-
 Java study with Alura course
-
 
 Objectives:
 
-- Aprender a consumir uma API HTTP em Java;
+- Learn to consume a HTTP API with Java;
 
-- Entender como receber e converter dados no formato JSON;
+- Understand how to receve and convert data from JSON;
 
-- Utilizar a biblioteca externa GSON para fazer serialização e desserialização de dados;
+- Utilize the GSON extern library to serialize and deserialize data;
 
-- Lidar com erros e tratar exceções;
+- Handling errors and exceptions;
 
-- Conhecer o pacote java.io para manipulação de arquivos.
+- Knowing the java.io package to manipulate files.
